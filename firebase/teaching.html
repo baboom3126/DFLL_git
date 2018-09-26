@@ -21,23 +21,6 @@
   <link href="assets/fonts/style.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
-  <!-- ///////////////////////////////////////////// -->
-  <script src="./js/teaching.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDkeqqfLVS6owmqEQTJRo3SQ5uYeCIblF4",
-      authDomain: "nchudfll2018-eb03a.firebaseapp.com",
-      databaseURL: "https://nchudfll2018-eb03a.firebaseio.com",
-      projectId: "nchudfll2018-eb03a",
-      storageBucket: "nchudfll2018-eb03a.appspot.com",
-      messagingSenderId: "750573708430"
-    };
-    firebase.initializeApp(config);
-  </script>
-
-<!-- ///////////////////////////////////////////// -->
 
 </head>
 <body>
@@ -190,6 +173,13 @@
 </body>
 </html>
 
+<!-- ///////////////////////////////////////////// -->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script src="./js/main.js"></script>
+
+<!-- ///////////////////////////////////////////// -->
+
+
 
 <script type="text/javascript">
 
@@ -202,7 +192,7 @@ firebase.database().ref('teaching').once('value',function(snapshot){
     console.log(name+"<br>"+yt_embed);
 
 
-    document.getElementById('div1').innerHTML+="<section class='mbr-section content4 cid-r4z730AhNS' id='content4-21'><div class='container'><div class='media-container-row'><div class='title col-12 col-md-8'><h2 class='align-center pb-3 mbr-fonts-style display-2'><a href='video.html?"+yt_embed+"?"+name+"'>"+i+"."+name+"</a></h2><h3 class='mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5'>"+date+"</h3></div></div></div></section>"
+    document.getElementById('div1').innerHTML+="<section class='mbr-section content4 cid-r4z730AhNS' id='content4-21'><div class='container'><div class='media-container-row'><div class='title col-12 col-md-8'><h2 class='align-center pb-3 mbr-fonts-style display-2'><a href='video.html?"+i+"'>"+i+"."+name+"</a></h2><h3 class='mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5'>"+date+"</h3></div></div></div></section>"
 
 
   }

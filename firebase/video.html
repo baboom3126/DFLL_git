@@ -110,7 +110,19 @@
 </section>
 
 
+<section class="mbr-section content4 cid-r4z7Dhtmee" id="content4-3000">
 
+
+
+    <div class="container">
+        <div class="media-container-row">
+          <div id="doc_embed">
+          </div>
+
+
+        </div>
+    </div>
+</section>
 
 
 
@@ -188,14 +200,33 @@
 </body>
 </html>
 
+
+<!-- ///////////////////////////////////////////// -->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script src="./js/main.js"></script>
+
+<!-- ///////////////////////////////////////////// -->
+
+
+
 <script type="text/javascript">
   var link = window.location.search;
   link = link.split('?');
-  var name = decodeURI(link[2]);
-  console.log(name);
+  var id = decodeURI(link[1]);
+  console.log(id);
 
+firebase.database().ref('teaching/'+id).once('value',function(snapshot){
+  var doc_embed = snapshot.child("doc_embed").val();
+  var yt_embed = snapshot.child("yt_embed").val();
+  var name = snapshot.child("name").val();
+  
+   $("#yt_title").html(name);
+   if(yt_embed!=null){
+   $("#iframe_yt").html("<iframe width='1280' height='720' src='"+yt_embed+"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>");
+   }
+   if(doc_embed!=null){
+   $("#doc_embed").html("<iframe src='"+doc_embed+"' frameborder='0' width='960' height='749' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>");
+    }
+});
 
-  $("#iframe_yt").html("<iframe width='1280' height='720' src='"+link[1]+"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>");
-
-  $("#yt_title").html(name);
 </script>

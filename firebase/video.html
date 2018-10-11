@@ -98,20 +98,21 @@
     </div>
 </section>
 
-<section class="cid-r4z7GHHyLY" id="video3-28">
+<section class="" id="video3-28">
 
 
 
     <figure class="mbr-figure align-center container">
-        <div class="video-block col-12" style="width: 100%;">
-            <div id='iframe_yt' class="embed-responsive embed-responsive-16by9">
-            </div>
+        <div class="video-block col-12" id='div_yt_many' style="width: 100%;">
+            <div id='iframe_yt' class='embed-responsive embed-responsive-16by9'></div>
+
         </div>
+
     </figure>
 </section>
 
 
-<section class="mbr-section content4 cid-r4z7Dhtmee" id="content4-3000">
+<section class="mbr-section content4 cid-r4z7Dhtmee cid-r4z7GHHyLY" id="content4-3000">
 
 
 
@@ -212,6 +213,7 @@
 
 
 <script type="text/javascript">
+	var yt_string="";
   var link = window.location.search;
   link = link.split('?');
   var id = decodeURI(link[1]);
@@ -220,12 +222,19 @@
 firebase.database().ref('teaching/'+id).once('value',function(snapshot){
   var doc_embed = snapshot.child("doc_embed").val();
   var yt_embed = snapshot.child("yt_embed").val();
+  var yt_embed_1 = snapshot.child("yt_embed_1").val();
   var name = snapshot.child("name").val();
 
    $("#yt_title").html(name);
-   if(yt_embed!=null){
+
+   if(yt_embed_1!=null){
+   	$("#div_yt_many").html("<div id='iframe_yt' class='embed-responsive embed-responsive-16by9'><iframe class='embed-responsive-item'  src='"+yt_embed+"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div><br><div id='iframe_yt' class='embed-responsive embed-responsive-16by9'><iframe class='embed-responsive-item'  src='"+yt_embed_1+"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></div>");
+   }
+   else if(yt_embed!=null){
    $("#iframe_yt").html("<iframe class='embed-responsive-item'  src='"+yt_embed+"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>");
    }
+
+   
    if(doc_embed!=null){
    $("#doc_embed").html("<iframe class='embed-responsive-item' src='"+doc_embed+"' frameborder='0' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>");
     }

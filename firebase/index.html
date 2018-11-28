@@ -84,7 +84,7 @@
             <div class="dropdown-menu"><a class="text-black dropdown-item display-7" href="student.html"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>學生作品</a><a class="text-black dropdown-item display-7" href="index.html" aria-expanded="false"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>期末發表</a></div>
           </li>
         </ul>
-        <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="index.html">最新消息</a></div>
+        <div class="navbar-buttons mbr-section-btn"><i class="btn btn-sm btn-primary display-4" style="border-radius:30px;" id="VisitedCounter" >瀏覽人次:000</i></div>
       </div>
     </nav>
   </section>
@@ -164,6 +164,17 @@
 
   });
 
+
+function VisitedCounter(){
+  firebase.database().ref('VisitedCounter').once('value',function(snapshot){
+    var VisitedCounter = snapshot.val();
+
+    var str_VisitedCounter = '瀏覽人次:'+VisitedCounter;
+    document.getElementById('VisitedCounter').innerHTML = str_VisitedCounter;
+    firebase.database().ref('VisitedCounter').set(++VisitedCounter);
+  });
+}
+VisitedCounter();
 </script>
 
 <tr><td class='body-item mbr-fonts-style display-7 center'>2018/04/10</td><td class='body-item mbr-fonts-style display-7'>Loading...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>

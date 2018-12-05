@@ -49,14 +49,21 @@
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item dropdown open">
-                    <a class="nav-link link text-black dropdown-toggle display-7" href="index.html" data-toggle="dropdown-submenu" aria-expanded="true">
-                        教學資源</a><div class="dropdown-menu"><a class="text-black dropdown-item display-7" href="index.html"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>課程教材</a><a class="text-black dropdown-item display-7" href="index.html" aria-expanded="false"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>業師分享</a></div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link link text-black dropdown-toggle display-7" href="index.html" data-toggle="dropdown-submenu" aria-expanded="false">學生作品</a><div class="dropdown-menu"><a class="text-black dropdown-item display-7" href="page1.html"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>學生作品</a><a class="text-black dropdown-item display-7" href="index.html" aria-expanded="false"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>期末發表</a></div>
-                </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="index.html">最新消息</a></div>
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item dropdown open">
+              <a class="nav-link link text-black dropdown-toggle display-7" href="index.html" data-toggle="dropdown-submenu" aria-expanded="true">
+                          教學資源</a>
+              <div class="dropdown-menu"><a class="text-black dropdown-item display-7" href="teaching.html"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>課程教材</a></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link link text-black dropdown-toggle display-7" href="index.html" data-toggle="dropdown-submenu" aria-expanded="false">學生作品</a>
+              <div class="dropdown-menu">
+                <a class="text-black dropdown-item display-7" href="student.html"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>學生作品</a>
+                <a class="text-black dropdown-item display-7" href="final.html" aria-expanded="false"><span class="mbri-success mbr-iconfont mbr-iconfont-btn"></span>期末發表</a>
+              </div>
+            </li>
+          </ul>
+          <div class="navbar-buttons mbr-section-btn"><i class="btn btn-sm btn-primary display-4" style="border-radius:30px;" id="VisitedCounter" >瀏覽人次:000</i></div>
         </div>
     </nav>
 </section>
@@ -300,3 +307,6 @@
 
 </body>
 </html>
+<script type="text/javascript">
+  document.getElementById('VisitedCounter').innerHTML = localStorage.str_VisitedCounter;
+</script>

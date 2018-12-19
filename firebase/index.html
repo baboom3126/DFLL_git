@@ -103,7 +103,7 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="mbr-white col-md-10">
-          <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1">國際視野<br>中英種子口譯員培育計畫<br>
+          <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1">國際視野，雙語人選:<br>中英種子口譯員培育計畫<br>
             <h2 class="mbr-section-title mbr-fonts-style pb-3 display-2">@中興外文</h2><br>
                 </h1>
 
@@ -116,10 +116,47 @@
   </section>
 
   <section class="section-table cid-r3rHdcN9kL" id="table1-k">
+    <div class="text-center container" >
+      <h1 class="mbr-section-title mbr-fonts-style align-left  "style=""><strong>最新消息</strong></h1>
+      <hr>
+      <ul><h4 style="text-align:center;font-weight:bold;">興大首辦口譯實務期末發表會 學生同步口譯<br>
+        <a href="https://www2.nchu.edu.tw/news-detail/id/44868">https://www2.nchu.edu.tw/news-detail/id/44868</a>
+      </h4></ul>
+      <div class="container" style="text-align:left;"><div style="padding-left:10%;padding-right:10%;">
+
+        創新教學培育口譯人才！<strong>中興大學</strong>
+        外文系執行教育部中英種子口譯員培訓計畫之子計畫「國際視野，雙語人選----中英種子口譯員培育計畫」，
+        12月18至19日舉辦期末課程發表會，以「小資遊天下，口袋不深也能深度旅遊」為主題，邀請四位具豐富策展及旅遊經驗的國內外講者進行演講，
+        並由修課學生現場逐步與同步口譯，驗收學習成果。<br>
+      <br>
+      計畫主持人興大外文系助理教授陳安頎表示，課程安排以時事新聞為教材，課程內容包含口說能力、
+      演講技巧、記憶訓練、口譯筆記、模擬會議等等實務取向實作練習活動，學生來自各系各年級，涵蓋外文系口譯初階/外文系同步翻譯/全校選修口譯，共四班八十多位學生修課。<br>
+      <br>
+      此次期末發表以國際會議的形式舉辦，為興大第一次有實務取向的口譯課程發表會，特別邀請四位講者演講，包含國際知名策展人&amp;TED Talk講者易安妮、畢業於哈佛大學的興大台文所助理教授施開揚、Taipei Walking Tour講者林珮如、TC Time Walk創辦人徐銘遠，由學生逐步口譯與同步口譯。教師與外審委員將依據學生的中英語言能力、學期所習得的口譯技巧、小資旅遊相關背景知識三大面向進行評分與提點。<br>
+      <br>
+      陳安頎老師指出，此課程結合教育部資源，減少每班學生人數，透過創新教學內容、由淺入深、因材施教的方式，循序漸進介紹口譯技巧。臺灣正朝向2030雙語國家的政策推動，對於具國際觀的雙語人才之需求甚為迫切，此為興大推動教育部多元語境之英文學習革新計劃的第一年，未來將持續創新教學引發學習熱情，培育具有國際觀與語言能力的新世紀人才。<br>
+
+      <img src="https://www.nchu.edu.tw/upfile/web/d570ce2b726b90813f1b122f67000fe9d55524d0_a.jpg" width="40%" height="auto" alt="合影">
+        <img src="https://www.nchu.edu.tw/upfile/web/b219b28211f1db84493cbda99c97ee0497389e50_a.jpg" width="40%" height="auto" alt="">
+        <br>
+        <br><span >· 中興大學外文系執行教育部中英種子口譯員培訓計畫，12月18至19日舉辦期末課程發表會</span>
+
+      </div>      </div>
 
 
+<br>
+      <hr>
+      <ul><h4 style="text-align:left;font-weight:bold;">· 期末發表活動</h4></ul>
+      <img src="./img/0001.jpg" class="img-responsive" alt="Responsive image" style="width:80%;height: auto;">
+      <br><hr>
+      <h4 style="text-align:left;font-weight:bold;">· 邀請函</h4>
+      <img src="./img/2.jpg" class="img-responsive" alt="Responsive image" style="width:80%;height: auto;">
+      <hr>
+      <img src="./img/card.jpeg" class="img-responsive" alt="Responsive image" style="width:70%;height: auto;">
 
-    <div class="container container-table">
+    </div>
+
+    <!-- <div class="container container-table">
       <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2"><strong>
           佈告欄
       </strong></h2>
@@ -152,33 +189,7 @@
 
             <tbody id='index_table'>
 
-<script type="text/javascript">
 
-  firebase.database().ref('Bulletin').once('value',function(snapshot){
-    var numChildren = snapshot.numChildren();
-    console.log(numChildren);
-    var temp_string = '';
-    for(var i = 0 ; i<numChildren ; i++){
-      var content = snapshot.child(numChildren-i+"/content").val();
-      var date = snapshot.child(numChildren-i+"/date").val();
-      temp_string +="<tr><td class='body-item mbr-fonts-style display-7 center'>"+date+"</td><td class='body-item mbr-fonts-style display-7'>"+content+"</td></tr>";
-    }
-    document.getElementById('index_table').innerHTML=temp_string;
-
-  });
-
-
-function VisitedCounter(){
-  firebase.database().ref('VisitedCounter').once('value',function(snapshot){
-    var VisitedCounter = snapshot.val();
-    var str_VisitedCounter = '瀏覽人次:'+VisitedCounter;
-    localStorage.setItem("str_VisitedCounter",str_VisitedCounter);
-    document.getElementById('VisitedCounter').innerHTML = str_VisitedCounter;
-    firebase.database().ref('VisitedCounter').set(++VisitedCounter);
-  });
-}
-VisitedCounter();
-</script>
 
 <tr><td class='body-item mbr-fonts-style display-7 center'>2018/04/10</td><td class='body-item mbr-fonts-style display-7'>Loading...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 
@@ -200,11 +211,11 @@ VisitedCounter();
             <div class="col-md-6"></div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
-  <section class="features3 cid-r3rYjRLs9a" id="features3-1a">
+  <!-- <section class="features3 cid-r3rYjRLs9a" id="features3-1a">
 
 
 
@@ -286,7 +297,7 @@ VisitedCounter();
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="cid-r3rTXX9zct mbr-reveal" id="footer2-15">
 
@@ -382,3 +393,31 @@ VisitedCounter();
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+  // firebase.database().ref('Bulletin').once('value',function(snapshot){
+  //   var numChildren = snapshot.numChildren();
+  //   console.log(numChildren);
+  //   var temp_string = '';
+  //   for(var i = 0 ; i<numChildren ; i++){
+  //     var content = snapshot.child(numChildren-i+"/content").val();
+  //     var date = snapshot.child(numChildren-i+"/date").val();
+  //     temp_string +="<tr><td class='body-item mbr-fonts-style display-7 center'>"+date+"</td><td class='body-item mbr-fonts-style display-7'>"+content+"</td></tr>";
+  //   }
+  //   document.getElementById('index_table').innerHTML=temp_string;
+  //
+  // });
+
+
+function VisitedCounter(){
+  firebase.database().ref('VisitedCounter').once('value',function(snapshot){
+    var VisitedCounter = snapshot.val();
+    var str_VisitedCounter = '瀏覽人次:'+VisitedCounter;
+    localStorage.setItem("str_VisitedCounter",str_VisitedCounter);
+    document.getElementById('VisitedCounter').innerHTML = str_VisitedCounter;
+    firebase.database().ref('VisitedCounter').set(++VisitedCounter);
+  });
+}
+VisitedCounter();
+</script>
